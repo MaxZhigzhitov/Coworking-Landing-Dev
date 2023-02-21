@@ -1,0 +1,261 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Coworking Landing Page
+        link(href="css/style.min.css", rel="stylesheet")
+    body 
+        header.header#header 
+            .container
+                .header__logo 
+                    a(href="#")
+                        img(src="images/logo-idea1.svg") 
+                nav.header__nav
+                    li.header__nav-item
+                        a(href="#") link1
+                    li.header__nav-item
+                        a(href="#") link2
+                    li.header__nav-item
+                        a(href="#") link3
+                    li.header__nav-item
+                        a(href="#") link4
+
+        .container 
+            section.promo#promo 
+                .promo__logo 
+                    img(src="images/logo-idea-light.svg", alt="")
+                h1.title.title--h1 Еще весною не одета
+                .textbox.promo__textbox
+                    p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis illum nulla recusandae nostrum laboriosam dolorum aut quisquam assumenda explicabo omnis?
+
+                mixin tabnav(...items)
+                    nav.tabnav 
+                        each item in items
+                            li
+                                a(href="#")= item 
+
+                +tabnav('О нас', 'Кабинеты', 'Конференц-залы', 'Тарифы')
+                        
+            section.advantages#advantages 
+                .title-h2-wrapper 
+                    h2.title.title--h2 Ideas come to our clients 
+                .advantages__carousel 
+                    .advantages__slider
+                        .advantages__slider-image 
+                            img(src="images/gallery/mika-baumeister-LaqL8nxiacc-unsplash.jpg", alt="")
+                        .advantages__slider-image 
+                            img(src="images/gallery/nastuh-abootalebi-yWwob8kwOCk-unsplash.jpg", alt="")
+                        .advantages__slider-image 
+                            img(src="images/gallery/rodeo-project-management-software-PYqzYhTNjho-unsplash.jpg", alt="")
+
+                    .advantages__carousel-controls 
+                        button.carousel-btn
+                            i 
+                        button.carousel-btn 
+                            i 
+                .textblock.advantages__textblock.center 
+                    p Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      |
+                      |Voluptatum ex exercitationem a delectus repellendus, ea 
+                      |pariatur eveniet dignissimos provident itaque animi 
+                hr
+                .advantages__list-container 
+                    h2.title.title--h2.title--black Почему выбирают нас
+                    .advantages__list 
+                        .advantages__item
+                            .advantages__picture
+                                img(src="images/sensor-signal-wi-fi-svgrepo-com.svg", alt="")
+                            .advantages__text 
+                                .advantages__name Adv Name 
+                                .advantages__descr.textbox 
+                                    p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi sit, fugiat ipsum alias sint possimus?
+                        .advantages__item
+                            .advantages__picture
+                                img(src="images/locker-svgrepo-com.svg", alt="")
+                            .advantages__text 
+                                .advantages__name Adv Name 
+                                .advantages__descr.textbox 
+                                    p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi sit, fugiat ipsum alias sint possimus?
+                        .advantages__item
+                            .advantages__picture
+                                img(src="images/printer-part-2-svgrepo-com.svg", alt="")
+                            .advantages__text 
+                                .advantages__name Adv Name 
+                                .advantages__descr.textbox 
+                                    p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi sit, fugiat ipsum alias sint possimus?
+                        .advantages__item
+                            .advantages__picture
+                                img(src="images/kitchen-pack-cook-svgrepo-com.svg", alt="")
+                            .advantages__text 
+                                .advantages__name Adv Name 
+                                .advantages__descr.textbox 
+                                    p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi sit, fugiat ipsum alias sint possimus?
+                        .advantages__item
+                            .advantages__picture
+                                img(src="images/projector-svgrepo-com.svg", alt="")
+                            .advantages__text 
+                                .advantages__name Adv Name 
+                                .advantages__descr.textbox 
+                                    p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi sit, fugiat ipsum alias sint possimus?
+                        .advantages__item
+                            .advantages__picture
+                                img(src="images/coffee-cup-svgrepo-com.svg", alt="")
+                            .advantages__text 
+                                .advantages__name Adv Name 
+                                .advantages__descr.textbox 
+                                    p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi sit, fugiat ipsum alias sint possimus?
+
+            section.places#places 
+                .title-h2-wrapper 
+                    h2.title.title--h2 Выберите свою обстановку
+                +tabnav('Офисы', 'Митинг-румы', 'OPENSPACE')
+                .places__list 
+                    .place__item 
+                        .place-item__image-wrapper 
+                            img(class="place-item__image", src="images/gallery/rodeo-project-management-software-PYqzYhTNjho-unsplash.jpg", alt="")
+                        .place-item__header 
+                            h3.title.item-title Лаванда-центр
+                            .place-item__capacity
+                                |
+                                |
+                                img(src="images/people-icon-gradient.svg", alt="")
+                                div 30 мест
+                        .place-item__location 
+                            span.city Москва
+                            span.street м.Павелецкая
+                        .place-item__features-wrapper 
+                            .place-item__feature
+                                .place-item__feature-title Кухня рядом
+                                .textbox.place-item__textbox
+                                    p Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui tenetur impedit odit similique, non eligendi eum minima at quas libero!
+                            .place-item__feature
+                                .place-item__feature-title Отличный вид из окна
+                                .textbox.place-item__textbox
+                                    p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos libero veniam maiores iure vero aspernatur neque magni delectus placeat non.
+                            .place-item__feature
+                                .place-item__feature-title Конференц-оборудование
+                                .textbox.place-item__textbox
+                                    p Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam vel culpa exercitationem!
+                        .place-item__cta-wrapper 
+                            button.cta-button Забронировать
+
+                    //- -----------------------------
+                    .place__item 
+                        .place-item__image-wrapper 
+                            img(class="place-item__image", src="images/gallery/rodeo-project-management-software-PYqzYhTNjho-unsplash.jpg", alt="")
+                        .place-item__header 
+                            h3.title.item-title Лаванда-центр
+                            .place-item__capacity
+                                |
+                                |
+                                img(src="images/people-icon-gradient.svg", alt="")
+                                div 30 мест
+                        .place-item__location 
+                            span.city Москва
+                            span.street м.Павелецкая
+                        .place-item__features-wrapper 
+                            .place-item__feature
+                                .place-item__feature-title Кухня рядом
+                                .textbox.place-item__textbox
+                                    p Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui tenetur impedit odit similique, non eligendi eum minima at quas libero!
+                            .place-item__feature
+                                .place-item__feature-title Отличный вид из окна
+                                .textbox.place-item__textbox
+                                    p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos libero veniam maiores iure vero aspernatur neque magni delectus placeat non.
+                            .place-item__feature
+                                .place-item__feature-title Конференц-оборудование
+                                .textbox.place-item__textbox
+                                    p Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam vel culpa exercitationem!
+                        .place-item__cta-wrapper 
+                            button.cta-button Забронировать
+
+                    //- -----------------------------
+                    .place__item 
+                        .place-item__image-wrapper 
+                            img(class="place-item__image", src="images/gallery/rodeo-project-management-software-PYqzYhTNjho-unsplash.jpg", alt="")
+                        .place-item__header 
+                            h3.title.item-title Лаванда-центр
+                            .place-item__capacity
+                                |
+                                |
+                                img(src="images/people-icon-gradient.svg", alt="")
+                                div 30 мест
+                        .place-item__location 
+                            span.city Москва
+                            span.street м.Павелецкая
+                        .place-item__features-wrapper 
+                            .place-item__feature
+                                .place-item__feature-title Кухня рядом
+                                .textbox.place-item__textbox
+                                    p Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui tenetur impedit odit similique, non eligendi eum minima at quas libero!
+                            .place-item__feature
+                                .place-item__feature-title Отличный вид из окна
+                                .textbox.place-item__textbox
+                                    p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos libero veniam maiores iure vero aspernatur neque magni delectus placeat non.
+                            .place-item__feature
+                                .place-item__feature-title Конференц-оборудование
+                                .textbox.place-item__textbox
+                                    p Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam vel culpa exercitationem!
+                        .place-item__cta-wrapper 
+                            button.cta-button Забронировать
+
+                    //- -----------------------------
+
+            section.testimonials#testimonials
+                .title-h2-wrapper 
+                    h2.title.title--h2 Выберите свою обстановку
+                .testimonials__content 
+                    .testimonials__carousel 
+                        .testimonials__slider 
+                            .testimonials__slide 
+                                img(src="images/profile-photo.jpg", alt="")
+                                .testimonials__person-name Иван Иванов
+                                .testimonials__person-job Дизайнер
+                                .testimonials__person-review 
+                                    .textbox.review-box 
+                                        p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae ipsa sint necessitatibus ex nihil eveniet obcaecati.
+                        .testimonials__carousel-controls 
+                            button.carousel-btn.left
+                                i 
+                            button.carousel-btn.right
+                                i 
+
+        footer.footer#footer 
+            .container 
+                .footer__inner 
+                    .header__logo 
+                        a(href="#")
+                            img(src="images/logo-idea1.svg") 
+                    nav.footer__nav-container 
+                        ul
+                            li
+                                a(href="#") Кабинеты и офисы
+                            li
+                                a(href="#") Митинг-румы
+                            li
+                                a(href="#") Openspace-залы
+                            li
+                                a(href="#") Юридическая информация
+                            li
+                                a(href="#") Партнерам
+                            li
+                                a(href="#") Акции и скидки
+                    ul.footer__contacts 
+                        li.footer__city Москва
+                        li.footer__street м.Павелецкая
+                        li.footer__phone
+                            i
+                            span +7-924-770-6238
+                        li.footer__socials 
+                            .footer__social-link 
+                                a(href="#")
+                                    i 
+                            .footer__social-link 
+                                a(href="#")
+                                    i 
+                            .footer__social-link 
+                                a(href="#")
+                                    i 
+        script(src="js/main.min.js") 

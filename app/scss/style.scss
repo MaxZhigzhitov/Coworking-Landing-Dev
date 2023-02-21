@@ -1,0 +1,443 @@
+@import 'fonts.scss';
+@import 'variables.scss';
+@import 'utils.scss';
+@import 'mixins.scss';
+
+*, *::after, *::before{
+    box-sizing: border-box;
+}
+
+body{
+    color: $color-font-regular;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+}
+
+.advantages, .places, .testimonials{
+    background-color: #fff;
+    margin-bottom: 50px;
+    padding-bottom: 50px; 
+}
+
+
+hr{
+    border: none;
+    border-bottom: 8px dotted $color-accent1;
+    width: 80px;
+}
+
+
+
+.cta-button{
+    background-color: $color-accent1;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-family: 'Gotham Pro Black', sans-serif;
+    font-size: 22px;
+    line-height: 26px;
+    padding: 6px 12px;
+    cursor: pointer;
+
+    &:hover{
+        background-color: $color-button-highlight;
+    }
+}
+
+.title--h1{
+    font-family: $font-title-medium;
+    font-size: 4rem;
+    line-height: 4.5rem;
+    margin: 0em auto 0.35em;
+    text-transform: capitalize;
+}
+
+.title--h2{
+    font-family: $font-title-bold;
+    font-size: 2.5rem;
+    line-height: 3rem;
+    margin: 0;
+    text-align: center;
+}
+
+.title-h2-wrapper{
+    background-color: $color-h2-wrapper;
+    color: white;
+    width: 100%;
+    text-align: center;
+    border-radius: 30px 30px 0px 0px;
+    padding: 0.8em 0em;
+}
+
+
+
+.textbox{
+    line-height: 1.45;
+    letter-spacing: 0.035em;
+}
+
+.container{
+    max-width: 90vw;
+    margin: 0 auto;
+}
+
+img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+ul, nav{
+    list-style: none;
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+
+
+.header{
+    background-color: $color-topnav-bg;
+    box-shadow: 0px 4px 8px rgba($color: #000000, $alpha: 0.15);
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 5;
+}
+
+.header__inner{
+    height: 70px;
+    width: 100%;
+    @include flex-row-spread-full-width;
+}
+
+.header__nav{
+    @include flex-row-spread-full-width;
+    gap: 20px;
+
+    &-item{
+        font-family: $font-topnav;
+    }
+}
+
+.header__logo img{
+    height: 45px;
+    width: auto;
+}
+
+.promo{
+    background-image: linear-gradient(rgba($color-accent1, 0.8), rgba($color-accent2, 0.8)) ,url(../images/austin-distel-wawEfYdpkag-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 0px 0px 30px 30px;
+    color: white;
+    min-height: 75vh;
+    padding-top: 120px;
+    overflow: hidden;
+    @include flex-col-align-center;
+    margin-bottom: 50px;
+    position: relative;
+
+}
+
+.promo__textbox{
+    flex: 1 0 auto;
+    text-align: center;
+    width: 50%;
+}
+
+.promo__logo{
+    margin-bottom: 40px;
+}
+
+.tabnav{
+    background-color: $color-topnav-bg;
+    color: $color-font-regular;
+    @include flex-row-spread-space-around;
+    width: 100%;
+
+    & li{
+        font-family: $font-title-bold;
+        flex-basis: 100%;
+        text-align: center;
+    }
+
+    & li a{
+        display: block;
+        padding: 12px 0px;
+
+        &:hover{
+            color: white;
+            background: linear-gradient($color-grad-accent1, $color-grad-accent2);
+        }
+    }
+
+}
+
+.advantages{
+    @include flex-col-align-center;
+    
+}
+
+.advantages__list-container{
+    @include flex-col-align-center;
+    
+    & .title--h2{
+        margin-bottom: 1em;
+    }
+
+    & hr{
+        margin: 30px auto;
+    }
+}
+
+.advantages__list{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 65px 30px;
+    padding: 0px 150px;
+}
+
+.advantages__carousel{
+    max-width: 100%;
+    margin-bottom: 50px;
+    padding: 0px 0px 50px;
+    user-select: none;
+}
+
+.advantages__carousel .swiper-slide{
+    text-align: center;
+}
+
+.advantages__carousel .swiper-slide img{
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+.advantages__carousel .carousel-btn{
+    background-color: $color-h2-wrapper;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+
+    &:hover{
+        background-color: $color-accent1;
+    }
+
+    &::after{
+        color: white;
+        font-size: 24px;
+        font-weight: 800;
+    }
+}
+
+.advantages__item{
+    display: flex;
+}
+
+.advantages__textbox{
+    width: 50%;
+    text-align: center;
+}
+
+.advantages__picture{
+    margin-right: 25px;
+}
+
+.advantages__picture img{
+    height: 100px;
+    width: auto;
+}
+
+.advantages__name{
+    font-family: $font-title-bold;
+    margin-bottom: 1em;
+}
+
+
+.places__list{
+    @include flex-col-align-center;
+}
+
+.place__item{
+    display: grid;
+    grid-template-columns: [cline1] 30% [cline2] calc(1fr/3) [cline3] calc(1fr/3) [cline4] calc(1fr/3) [cline5];
+    grid-template-rows: [rline1] auto [rline2] auto [rline3] auto [rline4] auto [rline5];
+    gap: 15px 30px;
+    padding: 35px 100px;
+}
+
+.place-item__header,
+.place-item__location,
+.place-item__features-wrapper,
+.place-item__cta-wrapper{
+    grid-column: cline2 / span 3;
+}
+
+.place-item__header{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+
+    & .item-title{
+        font-family: $font-title-bold;
+        font-size: 2.5em;
+        margin: 0;
+        margin-right: auto;
+    }
+
+    & .place-item__capacity{
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        
+        & img{
+            height: 45px;
+        }
+
+        & .place-item__capacity-value{
+            flex: 1 0 auto;
+            font-family: 'Gotham Pro Black', sans-serif;
+            font-size: 22px;
+            line-height: 28px;
+        }
+    }
+}
+
+.place-item__location{
+    color: $color-font-pale;
+    @include flex-col-align-start;
+    
+    & .city, & .street{
+        font-size: 1.5em;
+        line-height: 1.5em;
+    }
+
+    & .city{
+        font-weight: 300;
+        letter-spacing: 0.165em;
+    }
+}
+
+.place-item__features-wrapper{
+    display: flex;
+    gap: 20px;
+}
+
+.place-item__feature-title{
+    border-bottom: 3px solid $color-accent1;
+    font-family: $font-title-bold;
+    margin-bottom: 1.875em;
+    padding-bottom: 0.5em;
+}
+
+.place-item__cta-wrapper{
+    @include flex-row-center;
+}
+
+.place-item__image-wrapper{
+    border-radius: 8px;
+    grid-row: rline1 / rline5;
+    overflow: hidden;
+    position: relative;
+
+    & img{
+        object-fit: cover;
+        height: 100%;
+    }
+
+    & .place-item__phone{
+        background-color: $color-grad-accent1;
+        color: white;
+        font-family: $font-title-bold;
+        padding: 0.85em 0em;
+        text-align: center;
+        width: 100%;
+        
+        position: absolute;
+        bottom: 0;
+
+        & a:hover{
+            text-decoration: underline;
+        }
+    }
+}
+
+
+
+.testimonials .title-h2-wrapper{
+    margin-bottom: 50px;
+}
+
+.testimonials .testimonials__slide{
+    @include flex-col-align-center;
+    gap: 1em 0em;
+
+    & .testimonials__person-name{
+        font-family: $font-title-medium;
+        font-size: 2em;
+        line-height: 1.2em;
+    }
+    & .testimonials__person-job{
+        color: $color-font-pale;
+        font-family: $font-title-regular;
+        font-size: 1.5em;
+        line-height: 1.2em;
+    }
+}
+
+.testimonials .testimonials__slide img{
+    border-radius: 50%;
+    width: 120px;
+}
+
+.footer{
+    color: white;
+    background-color: $color-accent1;
+}
+
+.footer__inner{
+    display: flex;
+    gap: 0px 30px;
+    font-family: $font-topnav;
+    padding: 30px 0px 50px;
+}
+
+.footer__nav-container{
+    flex-basis: 100%;
+}
+
+.footer__nav-container ul{
+    @include flex-col-align-start;
+    align-content: start;
+    flex-wrap: wrap;
+    gap: 30px 45px;
+    max-height: 120px;
+}
+
+
+.footer__contacts{
+    @include flex-col-align-start;
+    gap: 0.85em;
+}
+
+.footer__socials{
+    @include flex-row-spread-full-width;
+    gap: 15px;
+
+    & .footer__social-link{
+        font-size: 32px;
+        transition: all 0.25s ease;
+
+        &:hover{
+            transform: scale(1.2);
+            text-shadow: 0px 0px 8px rgba($color: #000000, $alpha: 0.2);
+        }
+    }
+}

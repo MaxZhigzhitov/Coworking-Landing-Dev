@@ -1,0 +1,6 @@
+#distributive folder
+dist
+
+node_modules
+
+package-lock.json
